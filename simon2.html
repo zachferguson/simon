@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)file:///D:/dropbox%20copy/siteuploads/simon.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Zach Ferguson Portfolio Page</title>
+
+    <!-- imports -->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./simon2_files/font-awesome.min.css">
+	<!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Google Fonts -->
+	<link href="./simon2_files/css" rel="stylesheet">
+	<link href="./simon2_files/css(1)" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- JavaScript -->
+    <script>
+    $(document).ready(function(){
+
+        // variables
+        let power = false;
+        let strict = false;
+
+        // event listeners
+        $("#powerButton").click( function(){
+
+            powerToggle();
+        });
+
+        // functions
+        function powerToggle () {
+            // toggle power on and off
+            console.log("I am a power toggle, and I have been clicked.");
+            switch (power == true) {
+                case false:
+                    $("#gameboard").css("background-image", "url(images/simon/s-on-reg-6.png");
+                    power = true;
+                    break;
+                case true:
+                    $("#gameboard").css("background-image", "url(images/simon/s-off-6.png");
+                    power = false;
+                    break;
+            }
+            /*
+            if (power == "off") {
+                console.log("The power was off.");
+                $("#powerButton").css("background-image", "url('images/simon/s-on-reg-6.png'");
+                power = "on";
+            }
+            if (power == "on") {
+                console.log("The power was on.");
+                $("#powerButton").css("background-image", "url('images/simon/s-off-6.png'");
+                power = "off";
+            }
+            */
+        }
+       // $("p").css("background-color");
+
+    });
+    </script>
+    <!-- CSS -->
+    <style>
+    <!-- layout   -->
+
+    .grid {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10% 90%;
+        grid-template-areas:
+                "header"
+                "game";
+        margin: 0;
+    }
+
+    #header {
+        grid-area: header;
+    }
+
+    #game {
+        grid-area: game;
+        display: grid;
+        grid-template-columns: auto 600px auto;
+        grid-template-rows: 600px;
+        grid-template-areas:
+                "lsb gameboard rsb";
+    }
+
+    #gameboard {
+        grid-area: gameboard;
+        background-image: url("images/simon/s-off-6.png");
+        background-repeat: no-repeat;
+        margin: 0 auto 0 auto;
+    }
+
+    #lsb {
+        grid-area: lsb;
+        background-color: lightcoral;
+    }
+
+    #rsb{
+        grid-area: rsb;
+        background-color: rebeccapurple;
+    }
+
+    #gamegraphic {
+        margin: 0 auto 0 auto;
+    }
+
+    header {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    div {
+        border-style: solid;
+        border-width: 1px;
+    }
+
+    @media screen and (max-width: 750px) {}
+        
+    </style>
+</head>
+<body>
+<div class="grid">
+    <div id="header">
+        <header><strong>Simon</strong></header>
+    </div>
+
+    <div id="game">
+        <div id="lsb">
+        </div>
+        <div id="gameboard">
+            <map name="simonclicks">
+                <area shape="poly" coords="366, 178, 308, 157, 309, 20, 404, 37, 479, 81, 531, 136, 561, 194, 580, 285, 438, 287, 416, 222" href="#" title="Red Button" alt="Red Button">
+                <area shape="poly" coords="34, 197, 77, 126, 126, 76, 196, 31, 287, 18, 286, 155, 224, 179, 172, 237, 159, 286, 16, 286" href="#" title="Green Button" alt="Green Button">
+                <area shape="poly" coords="176, 361, 217, 413, 287, 437, 290, 578, 211, 565, 136, 528, 71, 462, 29, 380, 20, 306, 160, 307" href="#" title="Yellow Button" alt="Yellow Button">
+                <area shape="poly" coords="421, 370, 437, 306, 580, 305, 564, 392, 531, 454, 487, 505, 416, 553, 310, 582, 309, 440, 380, 412" href="#" title="Blue Button" alt="Blue Button">
+                <area shape="circle" coords="330, 304, 21" href="#" title="Start Button" alt="Start Button">
+                <area shape="circle" coords="391, 303, 21" href="#" title="Strict Button" alt="Strict Button">
+                <area shape="rect" coords="270, 397, 327, 415.0833282470703" id="powerButton" href="#" title="Power Button" alt="Power Button">
+            </map>
+            <img id="gamegraphic" src="images/simon/s-click-img-6.png" usemap="simonclicks">
+        </div>
+        <div id="rsb">
+        </div>
+        <!--
+        <div id="btnRed"><p>&nbsp;</p></div>
+        <div id="btnGreen"><p>&nbsp;</p></div>
+        <div id="btnYellow"><p>&nbsp;</p></div>
+        <div id="btnBlue"><p>&nbsp;</p></div>
+        <div id="controls"><p></p></div>
+        -->
+    </div>
+</div>
+
+
+
+</div>
+
+<!-- jQuery -->
+<script src="./simon2_files/jquery.min.js.download"></script>
+
+
+
+
+</body></html>
